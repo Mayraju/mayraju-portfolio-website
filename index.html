@@ -4,24 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayraju-Portfolio</title>
+    <title>Mayraju - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Feedback</h1>
-    <table id="feedback-table" border="1">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Ratings out of 5</th>
-                <th>Feed back</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data will be inserted here -->
-        </tbody>
-    </table>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
+    </nav>
 
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm MayRaju, I am working as a Backend Developer.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Mayraju, with experience of 3 years in Software Development life Cycle. I have experience in tech stack like Nodejs,express,Go,
+        Core Java, Oops, DSA, Algorithms, Docker, Github, Git, Mongodb, sql, mysql, AWS S3, AWS Ec2, azure server,ssh,
+        linux,windows.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>Project 1: Real-estate Project which is mobile application.</li>
+        </ul>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Feedback</h2>
+        <table id="feedback-table" border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Ratings out of 5</th>
+                    <th>Feed back</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to fetch CSV data -->
     <script>
         async function fetchCSVData() {
             const response = await fetch('https://docs.google.com/spreadsheets/d/18vLXOERbtnSBXcs5qaB40g6vT4QKH1pr-gO5sOuhPtc/pub?output=csv');
