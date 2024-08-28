@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayraju-Portfolio</title>
+</head>
+
+<body>
+    <h1>Feedback</h1>
+    <table id="feedback-table" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Ratings out of 5</th>
+                <th>Feed back</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchCSVData() {
+            const response = await fetch('https://docs.google.com/spreadsheets/d/18vLXOERbtnSBXcs5qaB40g6vT4QKH1pr-gO5sOuhPtc/pub?output=csv');
+            const data = await response.text();
+
+            const rows = data.split('\n').slice(1);
+            const tableBody = document.getElementById('feedback-table').querySelector('tbody');
+
+            rows.forEach(row => {
+                const columns = row.split(',');
+                const tr = document.createElement('tr');
+
+                columns.forEach(column => {
+                    const td = document.createElement('td');
+                    td.textContent = column.trim();
+                    tr.appendChild(td);
+                });
+
+                tableBody.appendChild(tr);
+            });
+        }
+
+        fetchCSVData();
+    </script>
+</body>
+
+</html>
