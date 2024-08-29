@@ -124,3 +124,45 @@ footer {
         font-size: 1em;
     }
 }
+
+/* Projects Section Styles */
+#projects {
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+    /* Fresh green gradient */
+    color: #fff;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slightly transparent white */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
